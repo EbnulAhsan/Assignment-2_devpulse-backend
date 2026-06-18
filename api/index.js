@@ -1,3 +1,4 @@
-export default function handler(req, res) {
-    res.status(200).send("DevPulse API is running ✅");
-}
+import app from "../dist/server.js";
+import serverless from "serverless-http";
+
+export default serverless(app);
