@@ -16,8 +16,8 @@ const initDB = async () => {
     }
 };
 
-// run once
-initDB();
+// // run once
+// initDB();
 
 // ❗❗ VERY IMPORTANT (Vercel needs this)
 export default app;
