@@ -2,9 +2,9 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
 
-    entry: ["src/server.ts"],
+    entry: ["src/server.ts", "src/app.ts"],
 
-    format: ["esm"], // Keep this as ESM
+    format: ["esm"],
 
     target: "esnext",
 
@@ -18,19 +18,11 @@ export default defineConfig({
 
     sourcemap: true,
 
-    // Add this banner to shim require() for CJS dependencies
 
     banner: {
-
         js: `
-
-   import { createRequire } from 'module';
-
-   const require = createRequire(import.meta.url);
-
-  `,
-
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+`,
     },
-
 });
-
