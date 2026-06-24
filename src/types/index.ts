@@ -9,3 +9,5 @@ export type JwtUser = {
     name: string;
     role: UserRole;
 };
+
+// only 2 types user role in here contributor and maintainer

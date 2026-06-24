@@ -3,6 +3,8 @@ import { StatusCodes } from 'http-status-codes';
 import sendResponse from '../../utility/sendResponse';
 import { IssuesService } from './issues.service';
 
+// create all issues 
+
 const createIssue = async (req: Request, res: Response, next: NextFunction) => {
     try {
         if (!req.user) {
