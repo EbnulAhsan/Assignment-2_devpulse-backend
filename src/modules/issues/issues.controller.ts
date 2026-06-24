@@ -24,6 +24,8 @@ const createIssue = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
+
+// get all issues function
 const getAllIssues = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await IssuesService.getAllIssues(req.query);
@@ -38,6 +40,8 @@ const getAllIssues = async (req: Request, res: Response, next: NextFunction) => 
         next(error);
     }
 };
+
+// get single issue function
 
 const getSingleIssue = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -62,6 +66,7 @@ const getSingleIssue = async (req: Request, res: Response, next: NextFunction) =
     }
 };
 
+// update function
 const updateIssue = async (req: Request, res: Response, next: NextFunction) => {
     try {
         if (!req.user) {
@@ -90,6 +95,8 @@ const updateIssue = async (req: Request, res: Response, next: NextFunction) => {
         next(error);
     }
 };
+
+// delete function
 
 const deleteIssue = async (req: Request, res: Response, next: NextFunction) => {
     try {
