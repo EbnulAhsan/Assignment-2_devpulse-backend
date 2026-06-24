@@ -40,6 +40,8 @@ export const createTables = async () => {
 
 export default pool;
 
+// config all the data file perfectly 
+
 
 
 // import { Pool } from "pg";
